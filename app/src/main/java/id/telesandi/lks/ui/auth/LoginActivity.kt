@@ -38,12 +38,12 @@ class LoginActivity : AppCompatActivity() {
         textUsername = binding.username
         textPassword = binding.password
 
-        // ambil nilai input
-        val username = binding.inputUsername.text.toString()
-        val password = binding.inputpassword.text.toString()
-
         // logic ketika klik tombol login
         binding.btnLogin.setOnClickListener {
+            // ambil nilai input
+            val username = binding.inputUsername.text.toString()
+            val password = binding.inputpassword.text.toString()
+
             if(username.isEmpty()) {
                 textUsername.error = "username tidak boleh kosong!"
                 textUsername.editText?.setOnClickListener {
@@ -71,6 +71,7 @@ class LoginActivity : AppCompatActivity() {
 
             if (username == "Nopal" && password == "Tels") {
                 startActivity(Intent(this, MainActivity::class.java))
+                this.finish()
             } else if (!username.equals("Nopal") && !password.equals("Tels")) {
                 Toast.makeText(this, username, Toast.LENGTH_LONG).show()
             }
