@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="id.telesandi.lks.HomeFragment"
+        android:name="id.telesandi.lks.ui.fragment.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="id.telesandi.lks.ProfileFragment"
+        android:name="id.telesandi.lks.ui.fragment.ProfileFragment"
         android:label="Pofile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

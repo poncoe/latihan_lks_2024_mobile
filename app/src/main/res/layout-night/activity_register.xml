@@ -17,7 +17,7 @@
         android:text="@string/silahkan_isi_data_pribadi_anda"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#131313"
+        android:textColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

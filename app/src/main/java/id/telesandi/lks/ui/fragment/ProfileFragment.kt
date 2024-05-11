@@ -1,4 +1,4 @@
-package id.telesandi.lks
+package id.telesandi.lks.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
