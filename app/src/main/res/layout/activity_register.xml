@@ -1,152 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".ui.auth.LoginActivity">
 
-    <ScrollView
-        android:id="@+id/scrollable"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:fitsSystemWindows="true"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/silahkan_isi_data_pribadi_anda"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namalengkap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:hint="@string/nama_lengkap"
+        app:counterEnabled="true"
+        app:counterMaxLength="150"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputNamaLengkap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:inputType="text" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="60dp"
-                android:gravity="center"
-                android:text="@string/silahkan_isi_data_pribadi_anda"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/namalengkap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/nama_lengkap"
-                app:hintEnabled="true"
-                android:layout_margin="12dp"
-                app:counterEnabled="true"
-                app:counterMaxLength="150"
-                app:errorEnabled="true">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:hint="@string/username"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/namalengkap">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputNamaLengkap"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/username"
-                app:hintEnabled="true"
-                android:layout_margin="12dp"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/alamat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:hint="@string/alamat"
+        app:counterEnabled="true"
+        app:counterMaxLength="300"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/alamat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/alamat"
-                app:hintEnabled="true"
-                android:layout_margin="12dp"
-                app:counterEnabled="true"
-                app:counterMaxLength="300"
-                app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputAlamat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-            </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:hint="@string/hint_password"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alamat">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_password"
-                app:hintEnabled="true"
-                android:layout_margin="12dp"
-                app:errorEnabled="true"
-                app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-            </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/konfirmasiPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:hint="@string/konfirmasi_password"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/konfirmasiPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/konfirmasi_password"
-                app:hintEnabled="true"
-                android:layout_margin="12dp"
-                app:errorEnabled="true"
-                app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputKonfirmasiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputKonfirmasiPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-            </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDaftar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/daftar"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/konfirmasiPassword" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnDaftar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cornerRadius="6dp"
-                android:layout_margin="16dp"
-                android:text="@string/daftar">
-            </com.google.android.material.button.MaterialButton>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sudah_punya_akun"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDaftar" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cornerRadius="6dp"
-                android:layout_margin="16dp"
-                android:text="@string/sudah_punya_akun">
-            </com.google.android.material.button.MaterialButton>
-
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
