@@ -69,10 +69,10 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
-            if (username == "Nopal" && password == "Tels") {
+            if (username == "a" && password == "a") {
                 startActivity(Intent(this, MainActivity::class.java))
                 this.finish()
-            } else if (!username.equals("Nopal") && !password.equals("Tels")) {
+            } else if (!username.equals("a") && !password.equals("a")) {
                 Toast.makeText(this, username, Toast.LENGTH_LONG).show()
             }
         }
