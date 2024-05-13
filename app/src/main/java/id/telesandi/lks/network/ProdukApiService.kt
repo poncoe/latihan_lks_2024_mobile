@@ -29,7 +29,7 @@ object ProdukApi {
     }
 
     fun getProdukUrl(gambar: String): String {
-        return "$BASE_URL$gambar"
+        return gambar
     }
 
     enum class ApiStatus {LOADING, SUCCESS, FAILED}
